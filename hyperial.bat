@@ -4,7 +4,21 @@
 
 @echo off
 
-call settings.bat
+:: Where hyperial is. 
+set dir=C:\hyperial
+
+:: Force using colors.
+set force_colors=true
+
+:: Use UTF-8 encoding.
+set utf-8=true
+
+:: Start theme with windows terminal, if false hyperial will start in new cmd window.
+:: https://github.com/Nimplex/hyperial/blob/master/windowsterminal.md
+set windows_terminal=true
+
+:: Split WINDOWS TERMINAL into two panes with CMD and WSL.
+set windows_terminal.split=false
 
 if /i "%force_colors%" equ "true" (call %dir%\cl.bat --legacy) else (call %dir%\cl.bat)
 if /i "%utf-8%" equ "true" chcp 65001 >nul
