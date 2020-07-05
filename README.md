@@ -7,7 +7,7 @@
 </p>
 
 # Usage
-Download **hyperial**, and then run `hyperial.bat` by double-clicking.
+Download **hyperial**, put **hyperial** into C:\hyperial and then run `hyperial.bat` by double-clicking.
 
 # How to set hyperial as default windows terminal theme?
 [Tutorial](https://github.com/hXR16F/hyperial/blob/master/windowsterminal.md)
