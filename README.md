@@ -9,7 +9,7 @@
 # Usage
 Download **hyperial**, run `install.bat` by double-clicking.\
 After that, every time you will launch `cmd.exe` the theme will be set.\
-It's recommended to change the font of cmd (or use Windows Terminal) to prevent incorrect displaying.\
+It's recommended to use Windows Terminal to prevent incorrect displaying.\
 If you want to uninstall theme, run `uninstall.bat` by double-clicking.
 
 # Donate
