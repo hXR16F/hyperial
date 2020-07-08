@@ -1,12 +1,28 @@
-:: Programmed by hXR16F
+:: Programmed by hXR16F and Nimplex.
 :: hXR16F.ar@gmail.com, https://github.com/hXR16F
+:: No email,            https://github.com/Nimplex
 
 @echo off
-call settings.bat
 
-if /i "%force_colors%" equ "true" (call cl.bat --legacy) else (call cl.bat)
+:: Where hyperial is. 
+set dir=C:\hyperial
+
+:: Force using colors.
+set force_colors=true
+
+:: Use UTF-8 encoding.
+set utf-8=true
+
+:: Start theme with windows terminal, if false hyperial will start in new cmd window.
+:: https://github.com/Nimplex/hyperial/blob/master/windowsterminal.md
+set windows_terminal=true
+
+:: Split WINDOWS TERMINAL into two panes with CMD and WSL.
+set windows_terminal.split=false
+
+if /i "%force_colors%" equ "true" (call %dir%\cl.bat --legacy) else (call %dir%\cl.bat)
 if /i "%utf-8%" equ "true" chcp 65001 >nul
-if exist "block.chr" (for /f %%i in (block.chr) do (if not defined _b1 (set "_b1=%%i") else if not defined _b2 (set "_b2=%%i") else if not defined _b3 (set "_b3=%%i")))
+if exist "%dir%\block.chr" (for /f %%i in (%dir%\block.chr) do (if not defined _b1 (set "_b1=%%i") else if not defined _b2 (set "_b2=%%i") else if not defined _b3 (set "_b3=%%i")))
 setlocal EnableDelayedExpansion
 
 if not "%time:~0,1%" equ " " (
@@ -25,12 +41,10 @@ prompt %_time.segmented%%_path.segmented%%_input%
 
 if /i "%windows_terminal%" equ "true" (
 	if /i "%windows_terminal.split%" equ "true" (
-		start "" "wt" -p "Command Prompt" `; split-pane -H wsl.exe; focus-tab -t 0
+		cmd; split-pane -H wsl.exe; focus-tab -t 0
 	) else (
-		start "" "wt" -p "Command Prompt"
+		cmd
 	)
 ) else (
 	start cmd
 )
-
-exit

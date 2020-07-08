@@ -7,23 +7,10 @@
 </p>
 
 # Usage
-Download **hyperial**, edit `settings.bat` and then run `hyperial.bat` by double-clicking.
+Download **hyperial**, put **hyperial** into C:\hyperial and then run `hyperial.bat` by double-clicking.
 
-# Settings
-```bat
-:: Force using colors
-set force_colors=false
-
-:: Use UTF-8 encoding
-set utf-8=true
-
-:: Start WINDOWS TERMINAL with theme
-set windows_terminal=true
-
-:: Split WINDOWS TERMINAL into two panes with CMD and WSL
-set windows_terminal.split=true
-```
-If you don't have (or don't want to use) new terminal/WSL then disable it by setting `windows_terminal` or `windows_terminal.split` to `false`.
+# How to set hyperial as default windows terminal theme?
+[Tutorial](https://github.com/hXR16F/hyperial/blob/master/windowsterminal.md)
 
 # Donate
 If you support my work or like my projects, [you can donate me some money](https://github.com/hXR16F/donate/blob/master/README.md). Thank you 💙
