@@ -1,0 +1,1 @@
+x=msgbox("Theme installed successfully!", 0+64, "Hyperial")

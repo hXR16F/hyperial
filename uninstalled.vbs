@@ -1,0 +1,1 @@
+x=msgbox("Theme uninstalled successfully!", 0+64, "Hyperial")
